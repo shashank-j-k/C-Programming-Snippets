@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main (void)
+{
+    int iNo = 10;
+    int *pPtr = &iNo;                    // here '*' is datatype(pointer)
+
+    printf("iNo   = %d\n", iNo);         // 10
+    printf("&iNo  = %d\n", &iNo);        // 6422300 
+    printf("pPtr  = %d\n", pPtr);        // 6422300 
+    printf("&pPtr = %d\n", &pPtr);       // 6422296 
+    printf("*pPtr = %d\n", *pPtr);       // 10
+
+    *pPtr = 20;                          // here '*' is an operator(dereference / indirection)
+
+    printf("*pPtr = %d\n", *pPtr);       // 20
+    printf("iNo   = %d\n", iNo);         // 20
+
+    return 0;
+}
